@@ -1,0 +1,11 @@
+{
+    "/assets/remote-1/*":{
+        "target": "https://mfe-practice-3-workspace.vercel.app",
+        "pathRewrite": {
+            "^/assets/remote-1/" : "/first-mfe/assets/remote-1/"
+         },
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    }
+}
