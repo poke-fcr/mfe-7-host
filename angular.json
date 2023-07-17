@@ -148,6 +148,7 @@
 					},
 					"configurations": {
 						"production": {
+						"deployUrl": "https://mfe-7-remote-1.vercel.app",
 							"budgets": [
 								{
 									"type": "initial",
