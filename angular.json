@@ -75,12 +75,12 @@
 					"configurations": {
 						"production": {
 							"browserTarget": "host:build:production",
-							"extraWebpackConfig": "projects/host/webpack.prod.config.js",
-							"proxyConfig": "projects/host.proxy.conf.prod.json"
+							"extraWebpackConfig": "projects/host/webpack.prod.config.js"
+							
 						},
 						"development": {
-							"browserTarget": "host:build:development",
-							"proxyConfig": "projects/host/proxy.conf.json"
+							"browserTarget": "host:build:development"
+							
 						}
 					},
 					"defaultConfiguration": "development",
@@ -148,7 +148,6 @@
 					},
 					"configurations": {
 						"production": {
-						"deployUrl": "https://mfe-7-remote-1.vercel.app/",
 							"budgets": [
 								{
 									"type": "initial",
@@ -170,7 +169,13 @@
 							"vendorChunk": true,
 							"extractLicenses": false,
 							"sourceMap": true,
-							"namedChunks": true
+							"namedChunks": true,
+							"fileReplacements": [
+								{
+									"replace": "projects/remote-1/src/environments/environment.ts",
+									"with": "projects/remote-1/src/environments/environment.development.ts"
+								}
+							]
 						}
 					},
 					"defaultConfiguration": "production"
